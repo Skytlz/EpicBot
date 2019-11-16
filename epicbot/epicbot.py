@@ -22,16 +22,17 @@ async def on_message(message):
 
     if 'ping' in message.content:
         start = time.time()
-        await message.channel.send('pong!')
+        msg = await message.channel.send('pong!')
         end = time.time()
-        totalT = str(end-start)
-        await message.channel.edit.send('pong!' + totalT + 'ms')
+        totalT = end-start
+        await msg.edit(content="pong! `{} ms`".format(round(totalT, 3)))
 
     if 'pong' in message.content:
         start = time.time()
-        await message.channel.send('ping!')
+        msg = await message.channel.send('ping!')
         end = time.time()
-        totalT = str(end-start)
-        await message.channel.edit('ping!' + totalT + 'ms')
+        totalT = end-start
+        await msg.edit(content="pong! `{} ms`".format(round(totalT, 3)))
 
-client.run()
+
+client.run('')
