@@ -1,4 +1,13 @@
 import discord
+from discord.ext import commands
+import logging
+import time
+
+logger = logging.getLogger('discord')
+logger.setLevel(logging.DEBUG)
+handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+logger.addHandler(handler)
 
 client = discord.Client()
 
@@ -11,7 +20,18 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('ping'):
+    if 'ping' in message.content:
+        start = time.time()
         await message.channel.send('pong!')
+        end = time.time()
+        totalT = str(end-start)
+        await message.channel.edit.send('pong!' + totalT + 'ms')
 
-client.run('')
+    if 'pong' in message.content:
+        start = time.time()
+        await message.channel.send('ping!')
+        end = time.time()
+        totalT = str(end-start)
+        await message.channel.edit('ping!' + totalT + 'ms')
+
+client.run()
