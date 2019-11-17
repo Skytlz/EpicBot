@@ -6,7 +6,7 @@
     <ProjectHome>.</ProjectHome>
     <StartupFile>epicbot.py</StartupFile>
     <SearchPath>..\epicbot</SearchPath>
-    <WorkingDirectory>C:\Users\skytl\source\repos\EpicBot\epicbot</WorkingDirectory>
+    <WorkingDirectory>C:\Users\%USERPROFILE%\source\repos\EpicBot\epicbot</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>epicbot</Name>
     <RootNamespace>epicbot</RootNamespace>
