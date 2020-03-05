@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "epicbot", "epicbot.pyproj", "{7A15BD03-13DA-4318-91CE-75740767C476}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52E4AB5F-416F-47A2-89A0-076106DDC7AF}"
+	ProjectSection(SolutionItems) = preProject
+		cogs\error_handling.py = cogs\error_handling.py
+		cogs\skytlzplace.py = cogs\skytlzplace.py
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
