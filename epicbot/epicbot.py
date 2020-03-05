@@ -30,4 +30,4 @@ if __name__ == '__main__':
     for extension in initial_extensions:
         bot.load_extension(extension)
 
-bot.run('MzM2MzU1MDcwMTQ2NzcyOTkz.XdK-AA.D2MdsCZzDMdii0jE05EvzIzJ12Q')
+bot.run('')
